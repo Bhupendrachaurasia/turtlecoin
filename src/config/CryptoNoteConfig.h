@@ -30,7 +30,7 @@ namespace CryptoNote
 
         const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 10;
 
-        const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT = 60 * 60 * 2;
+        const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT = 60 * 60 * 24;
 
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3 = 3 * DIFFICULTY_TARGET;
 
@@ -60,12 +60,12 @@ namespace CryptoNote
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
         const char GENESIS_COINBASE_TX_HEX[] =
-            "still need to generate"
-            "d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
+            "";
+            "";
 
         static_assert(
             sizeof(GENESIS_COINBASE_TX_HEX) / sizeof(*GENESIS_COINBASE_TX_HEX) != 1,
-            "GENESIS_COINBASE_TX_HEX must not be empty.");
+            "GENESIS_COINBASE_TX_HEX");
 
         /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
            You can get this value by doing "print_block 2" in TurtleCoind. It is used to know what timestamp
